@@ -13,7 +13,7 @@ it 'login sucesso' do
 
    expect(find('#flash')).to have_content 'Olá, Tony Stark. Você acessou a área logada!'
 
-
+   page.save_screenshot('screenshot/login2.png')
     end
 
 end

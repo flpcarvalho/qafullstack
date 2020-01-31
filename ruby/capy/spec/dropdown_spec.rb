@@ -5,6 +5,7 @@ describe 'Caixa de opções', :dropdown do
         visit 'https://training-wheels-protocol.herokuapp.com/dropdown'
         select('Loki', from: 'dropdown')
         sleep 3
+        page.save_screenshot('screenshot/dropdown1.png')
 
     end
 
@@ -15,6 +16,8 @@ describe 'Caixa de opções', :dropdown do
         drop.find('option',text: 'Scott Lang').select_option
         sleep 3
 
+        page.save_screenshot('screenshot/dropdown2.png')
+
     end
 
     it 'qualquer item', :sample do
@@ -23,6 +26,7 @@ describe 'Caixa de opções', :dropdown do
         drop.all('option').sample.select_option
         sleep 3
 
+        page.save_screenshot('screenshot/dropdown3.png')
 
     end
 
